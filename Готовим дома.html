@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Заявка на участии в мероприятии "Готовим дома"</title>
+ 		<style>
+   			body {
+    				background: #c7b39b url(table2.jpg); /* Цвет фона и путь к файлу */
+    				background-size: 100%; 
+    				color: #fff; /* Цвет текста */
+   			}
+   			.text {
+    				text-align:  center;
+   			}
+
+
+			.p1 {
+ padding: 150px 10px 25px 10px;
+}
+			.p2 {
+ padding: 0px 10px;
+}
+
+			.p3 {
+ padding: 5px 10px 5px 10px;
+}
+			#mask {
+    				background-color:rgba(0,0,0,.5);
+    				height:100%;
+    				position:fixed;
+    				width:100%;
+    				top:0;
+    				left:0;
+			}
+			:-moz-placeholder {
+ 				color: black;
+			}
+			::-webkit-input-placeholder {
+ 				color: black;
+			}
+			.contact_form ul {
+ 				width:1350px;
+ 				list-style-type:none;
+				list-style-position:outside;
+ 				margin:0px;
+ 				padding:0px;
+			}
+			.contact_form li {
+				padding:12px;
+ 				position:relative;
+			}
+  		</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+<script>
+/**
+* Замените выражение в кавычках "css-selector" в коде ниже значением селектора элемента на Вашей лендинговой странице.
+* Вы можете использовать #id или любой другой CSS селектор, который будет точно определять поле ввода на Вашей лендинговой странице.
+* Пример: "Email": "#MyEmailField".
+* Если Ваша лендинговая страница не содержит одного или нескольких полей из приведенных ниже – оставьте строку без изменений или удалите полностью.
+*/
+var config = {
+    fields: {
+        "Contact": "fio", // ФИО контакта, который регистрируется на мероприятие
+        "Contact.Mobile": "phone", // Мобильный телефон контактаа
+        "Contact.Email": "email" // Email контакта
+    },
+    landingId: "f2054149-8021-479a-842b-4a5efffdbb33",
+    serviceUrl: "https://027786-crm-bundle.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: "//C:/Users/polyakovadi/Desktop/%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%B0%D0%BD%D0%B0%D1%81%D0%BE%D0%BD%D0%B8%D0%BA/%D0%A1%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE%20%D0%B7%D0%B0.html"
+};
+/**
+* Функция ниже создает объект из введенных данных.
+* Привяжите вызов этой функции к событию "onSubmit" формы или любому другому элементу события.
+* Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+*/
+function createObject() {
+    landing.createObjectFromLanding(config)
+}
+/**
+* Функция ниже инициализирует лендинг из параметров URL.
+*/
+function initLanding() {
+    landing.initLanding(config)
+}
+jQuery(document).ready(initLanding)
+</script>
+
+	</head>
+	<body>
+  		<div class="text">
+     			<div id="mask">
+        			<div class="p1"><p><font size="12" color="white" face="Verdana"><b>Регистрация на участие в мероприятии "Готовим дома"</b></font></p></div>
+        			<div class="p2"><p><font size="5" color="white" face="Arial">Для того, чтобы мы могли отправить Вам приглашение на участие, просим заполнить форму ниже</font></p></div>
+        			<div class="p2"><p><font size="6" color="white" face="Arial"></font></p></div>
+		<form class="contact_form" action="send.php" method="post" name="contact_form" onSubmit="createObject(); return false">
+			<ul>
+
+			 <li>
+ 			 <span class="required_notification"><font size="2" color="#FF0000" face="Verdana"><b>*Обязательные поля</b></font></span>
+ 			 </li>
+ 			 <li>
+			 <input type="text" name="fio" placeholder="*ФИО" required>
+			 </li>
+ 			 <li>
+			 <input type="text" name="email" placeholder="*E-mail" required>
+			 </li>
+ 			 <li>
+			 <input type="text" name="phone" placeholder="Контактный телефон" required>
+			 </li>
+ 			 <li>
+			 <button class="submit" type="submit">Отправить заявку</button>
+			 </li>
+			 </ul>
+     			</div>
+		</form>
+		</div>
+
+	</body>
+</html>
